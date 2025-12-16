@@ -1,11 +1,10 @@
 import styles from "./Balance.module.scss";
-import chip from "../../../public/golden.png";
 
 export default function Balance({ moneyType }) {
   return (
     <div className={styles.container}>
       <div className={styles.chipContainer}>
-        <img src={chip} alt="" className={styles.img} />
+        <img src="./golden.png" alt="" className={styles.img} />
         <span className={styles.subtext}>Available balance:</span>
       </div>
       <div className={styles.balanceContainer}>
