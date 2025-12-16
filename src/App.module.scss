@@ -1,0 +1,12 @@
+$bodycolor: #626262;
+
+body {
+  background-color: $bodycolor;
+  color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

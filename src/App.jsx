@@ -1,7 +1,10 @@
-import "./App.css";
+import styles from "./App.module.scss";
+import PopUp from "./components/PopUp/PopUp";
 
-function App() {
-  return <></>;
+export default function App() {
+  return (
+    <div className={styles.container}>
+      <PopUp />
+    </div>
+  );
 }
-
-export default App;
