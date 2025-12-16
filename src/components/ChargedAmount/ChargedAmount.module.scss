@@ -1,0 +1,28 @@
+@use "../../globals";
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-bottom: 16px;
+}
+
+.chipContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.img {
+  width: 18px;
+  height: 18px;
+}
+
+.subtext {
+  @extend %subtext;
+}
+
+.text {
+  @extend %text;
+}

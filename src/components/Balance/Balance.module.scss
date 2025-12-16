@@ -1,0 +1,46 @@
+@use "../../globals";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-bottom: 16px;
+}
+
+.chipContainer {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.img {
+  height: 18x;
+  width: 18px;
+}
+
+.subtext {
+  @extend %subtext;
+}
+
+.balanceContainer {
+  background-color: rgba(35, 36, 41, 1);
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.moneyString {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text {
+  @extend %text;
+}
+
+.goldenText {
+  @extend %text;
+  color: rgba(255, 202, 97, 1);
+}
