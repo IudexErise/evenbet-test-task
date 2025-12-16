@@ -1,8 +1,9 @@
 @use "../../globals";
 
 .container {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
   padding-bottom: 16px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   margin-bottom: 16px;

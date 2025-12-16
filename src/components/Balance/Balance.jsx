@@ -8,19 +8,17 @@ export default function Balance({ moneyType }) {
         <span className={styles.subtext}>Available balance:</span>
       </div>
       <div className={styles.balanceContainer}>
-        <div className={styles.moneyString}>
-          <span className={styles.subtext}>Real money:</span>
-          <span
-            className={moneyType === "cash" ? styles.text : styles.goldenText}
-          >
-            $80
-          </span>
-        </div>
+        <span className={styles.subtext}>Real money:</span>
+        <span
+          className={moneyType === "cash" ? styles.text : styles.goldenText}
+        >
+          $80
+        </span>
         {moneyType === "cash" && (
-          <div className={styles.moneyString}>
-            <span className={styles.subtext}>Cash money:</span>
-            <span className={styles.goldenText}>C$150</span>
-          </div>
+          <span className={styles.subtext}>Cash money:</span>
+        )}
+        {moneyType === "cash" && (
+          <span className={styles.goldenText}>C$150</span>
         )}
       </div>
     </div>
