@@ -26,9 +26,29 @@ export default function PopUp() {
       <ChargedAmount />
       <AmountSelect value={amount} setValue={setAmount} />
       <div className={styles.autoBuy}>
-        <button className={styles.button}>Auto Buy-In and Auto Rebuy</button>
+        <button
+          className={styles.button}
+          onClick={() => alert("Auto Buy-In and Auto Rebuy")}
+        >
+          Auto Buy-In and Auto Rebuy
+        </button>
       </div>
       <TablesActive value={tables} setValue={setTables} />
+      <div className={styles.buttonsContainer}>
+        <button onClick={() => alert("Cancel")} className={styles.buttonCancel}>
+          Cancel
+        </button>
+        <button
+          onClick={() =>
+            alert(
+              `amount:${amount} | moneyType:${moneyType} | tables:${tables}`
+            )
+          }
+          className={styles.buttonOk}
+        >
+          Ok
+        </button>
+      </div>
     </div>
   );
 }

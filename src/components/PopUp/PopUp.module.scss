@@ -48,12 +48,34 @@ $bg-color: #1d1e22;
   margin-bottom: 16px;
 }
 
-.button {
-  width: 100%;
-  @extend %text;
+%button {
   height: 40px;
   border-radius: 4px;
-  background: rgba(88, 95, 108, 1);
   color: white;
   border: none;
+  @extend %text;
+}
+
+.button {
+  @extend %button;
+  width: 100%;
+  background: rgba(88, 95, 108, 1);
+}
+
+.buttonsContainer {
+  padding: 16px 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttonCancel {
+  @extend %button;
+  width: 160px;
+  background: rgba(88, 95, 108, 1);
+}
+
+.buttonOk {
+  @extend %button;
+  width: 160px;
+  background: rgba(24, 167, 72, 1);
 }
