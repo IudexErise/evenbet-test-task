@@ -59,7 +59,8 @@ $bg-color: #1d1e22;
 .button {
   @extend %button;
   width: 100%;
-  background: rgba(88, 95, 108, 1);
+  background-color: rgba(88, 95, 108, 1);
+  @extend %buttonGradient;
 }
 
 .buttonsContainer {
@@ -71,11 +72,13 @@ $bg-color: #1d1e22;
 .buttonCancel {
   @extend %button;
   width: 160px;
-  background: rgba(88, 95, 108, 1);
+  background-color: rgba(88, 95, 108, 1);
+  @extend %buttonGradient;
 }
 
 .buttonOk {
   @extend %button;
   width: 160px;
-  background: rgba(24, 167, 72, 1);
+  background-color: rgba(24, 167, 72, 1);
+  @extend %buttonGradient;
 }

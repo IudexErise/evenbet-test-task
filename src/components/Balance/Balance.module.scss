@@ -32,11 +32,6 @@
   grid-template-columns: repeat(2, 1fr);
 }
 
-.moneyString {
-  display: flex;
-  justify-content: space-between;
-}
-
 .text {
   @extend %text;
 }
