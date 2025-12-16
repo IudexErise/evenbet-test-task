@@ -5,9 +5,11 @@ import MoneySelect from "../MoneySelect/MoneySelect";
 import GameType from "../GameType/GameType";
 import Balance from "../Balance/Balance";
 import ChargedAmount from "../ChargedAmount/ChargedAmount";
+import AmountSelect from "../AmountSelect/AmountSelect";
 
 export default function PopUp() {
   const [moneyType, setMoneyType] = useState("cash");
+  const [amount, setAmount] = useState(1);
 
   return (
     <div className={styles.container}>
@@ -20,6 +22,7 @@ export default function PopUp() {
       <GameType />
       <Balance moneyType={moneyType} />
       <ChargedAmount />
+      <AmountSelect value={amount} setValue={setAmount} />
     </div>
   );
 }

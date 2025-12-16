@@ -1,0 +1,97 @@
+@use "../../globals";
+
+$greenColor: rgba(24, 167, 72, 1);
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 16px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  width: 90px;
+  height: 40px;
+  border-radius: 4px;
+  background: $greenColor;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+  border: none;
+  font-family: Roboto Condensed;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.inputField {
+  position: relative;
+  width: 124px;
+  height: 40px;
+  border-radius: 4px;
+  padding: 8px 8px 12px 12px;
+  box-sizing: border-box;
+  border: 1px solid rgb(187, 187, 187);
+}
+
+.field::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+.label {
+  position: absolute;
+  top: -8px;
+  left: 8px;
+  height: 14px;
+  padding: 0 6px;
+  background: #1d1e22;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: Roboto Condensed;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  line-height: 100%;
+  @extend %text;
+  color: white;
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.input[type="number"] {
+  appearance: textfield;
+}
+
+.slider {
+  accent-color: $greenColor;
+}
