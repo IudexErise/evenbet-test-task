@@ -1,26 +1,17 @@
 @use "../../globals";
 
-$greenColor: rgba(24, 167, 72, 1);
-
 .container {
   display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-bottom: 16px;
-  padding-left: 12px;
-  padding-right: 12px;
-}
-
-.buttons {
-  display: flex;
   justify-content: space-between;
+  margin-bottom: 52px;
+  padding: 0 12px;
 }
 
 .button {
   width: 90px;
   height: 40px;
   border-radius: 4px;
-  background: $greenColor;
+  background: rgba(88, 95, 108, 1);
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
   border: none;
   font-family: Roboto Condensed;
@@ -35,6 +26,14 @@ $greenColor: rgba(24, 167, 72, 1);
 
   &:hover {
     cursor: pointer;
+  }
+
+  &:disabled {
+    background: rgba(0, 0, 0, 0.3);
+
+    &:hover {
+      cursor: auto;
+    }
   }
 }
 
@@ -82,8 +81,4 @@ $greenColor: rgba(24, 167, 72, 1);
 
 .input[type="number"] {
   appearance: textfield;
-}
-
-.slider {
-  accent-color: $greenColor;
 }

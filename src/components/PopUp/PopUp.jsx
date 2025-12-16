@@ -6,10 +6,12 @@ import GameType from "../GameType/GameType";
 import Balance from "../Balance/Balance";
 import ChargedAmount from "../ChargedAmount/ChargedAmount";
 import AmountSelect from "../AmountSelect/AmountSelect";
+import TablesActive from "../TablesActive/TablesActive";
 
 export default function PopUp() {
   const [moneyType, setMoneyType] = useState("cash");
   const [amount, setAmount] = useState(1);
+  const [tables, setTables] = useState(1);
 
   return (
     <div className={styles.container}>
@@ -23,6 +25,10 @@ export default function PopUp() {
       <Balance moneyType={moneyType} />
       <ChargedAmount />
       <AmountSelect value={amount} setValue={setAmount} />
+      <div className={styles.autoBuy}>
+        <button className={styles.button}>Auto Buy-In and Auto Rebuy</button>
+      </div>
+      <TablesActive value={tables} setValue={setTables} />
     </div>
   );
 }
